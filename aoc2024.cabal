@@ -9,7 +9,8 @@ maintainer: kyle@mayeses.com
 library
     hs-source-dirs: library
     exposed-modules:
-        Solution
+        Solution,
+        Utility
 
     build-depends:
         base ^>=4.17.2.0,
