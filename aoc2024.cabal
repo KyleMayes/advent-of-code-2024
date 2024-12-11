@@ -16,6 +16,7 @@ library
         base ^>=4.17.2.0,
         containers ^>= 0.6.6,
         multiset ^>= 0.3.4.3,
+        parsec ^>= 3.1.17.0,
         text ^>=2.1,
         vector ^>= 0.13.1.0
     
@@ -61,6 +62,7 @@ executable main
         base ^>=4.17.2.0,
         containers ^>= 0.6.6,
         multiset ^>= 0.3.4.3,
+        parsec ^>= 3.1.17.0,
         text ^>=2.1,
         vector ^>= 0.13.1.0,
         aoc2024
