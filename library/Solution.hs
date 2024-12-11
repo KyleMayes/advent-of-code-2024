@@ -36,8 +36,8 @@ instance Display T.Text where
   display = T.unpack
 
 executeSolution :: forall a b c. (Display b, Display c) => Solution a b c -> Input -> IO ()
-executeSolution (parse, part1, part2) input = do
-  input <- parse <$> loadInput input
+executeSolution (parseInput, part1, part2) input = do
+  input <- parseInput <$> loadInput input
   putStrLn $ concat $ replicate 40 "─"
   putStrLn $ "Part 1: " ++ (display . part1 $ input)
   putStrLn $ "Part 2: " ++ (display . part2 $ input)

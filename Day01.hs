@@ -9,8 +9,8 @@ type Input = ([Int], [Int])
 parseLine :: T.Text -> (Int, Int)
 parseLine line = let (a : b : xs) = map (read . T.unpack) . T.words $ line in (a, b)
 
-parse :: T.Text -> Input
-parse = unzip . map parseLine . filter (not . T.null) . T.lines
+parseInput :: T.Text -> Input
+parseInput = unzip . map parseLine . filter (not . T.null) . T.lines
 
 part1 :: Input -> Int
 part1 (a, b) =
@@ -23,4 +23,4 @@ part2 (a, b) =
    in sum $ map (\v -> v * IMS.occur v occurrences) a
 
 day01 :: (T.Text -> Input, Input -> Int, Input -> Int)
-day01 = (parse, part1, part2)
+day01 = (parseInput, part1, part2)

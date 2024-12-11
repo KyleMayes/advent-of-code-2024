@@ -6,8 +6,8 @@ import Utility (windows)
 
 type Input = [[Int]]
 
-parse :: T.Text -> Input
-parse = map (map (read . T.unpack) . T.words) . filter (not . T.null) . T.lines
+parseInput :: T.Text -> Input
+parseInput = map (map (read . T.unpack) . T.words) . filter (not . T.null) . T.lines
 
 safe1 :: [Int] -> Bool
 safe1 report =
@@ -30,4 +30,4 @@ part1 = length . filter safe1
 part2 :: Input -> Int
 part2 = length . filter safe2
 
-day02 = (parse, part1, part2)
+day02 = (parseInput, part1, part2)
